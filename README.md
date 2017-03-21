@@ -97,13 +97,16 @@ Lottie works just fine in Swift too!
 Simply `import Lottie` at the top of your swift class, and use Lottie as follows
 
 ```swift
-let animationView = LOTAnimationView.animationNamed("hamburger")
-self.view.addSubview(animationView!)
+let animationView = LOTAnimationView(name: "hamburger")
+self.view.addSubview(animationView)
 
-animationView?.play(completion: { (finished) in
-  // Do Something
+animationView.play(completion: { finished in
+    // Do Something
 })
 ```
+## Note:
+Animation file name should be first added to your project. as for the above code sample, It won't work until you add an animation file called `hamburger.json`.. 
+`let animationView = LOTAnimatedView.animationNamed("here_goes_your_json_file_name_without_.json")` 
 
 ## Supported After Effects Features
 
